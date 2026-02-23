@@ -204,4 +204,4 @@ For public portfolio showcasing, the dashboard is designed to be easily hosted u
 - **PDF Report Generation**: Allowing underwriters to export the Agent's final memo securely as a standardized PDF document.
 - **Portfolio Analytics**: Building a secondary dashboard page to analyze model drift and macro-level applicant trends.
 
----
+---## System Architecture: Modular ML Pipeline with Streamlit UI
