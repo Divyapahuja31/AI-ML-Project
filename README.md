@@ -205,3 +205,8 @@ For public portfolio showcasing, the dashboard is designed to be easily hosted u
 - **Portfolio Analytics**: Building a secondary dashboard page to analyze model drift and macro-level applicant trends.
 
 ---## System Architecture: Modular ML Pipeline with Streamlit UI
+
+## 🛠️ Technical Methodology
+- **Logic:** Automated pipeline with RobustScaler.
+- **Modeling:** Optimized Random Forest (GridSearchCV).
+- **Explainability:** Integrated SHAP values for feature analysis.
