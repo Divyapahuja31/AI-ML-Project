@@ -55,15 +55,15 @@ By combining predictive Machine Learning (Random Forests) with generative Agenti
 
 ```mermaid
 graph TD
-    A[Raw Borrower Data (CSV / Input)] -->|Ingestion| B(Preprocessing Pipeline)
-    B -->|Impute Medians| C(Clean Data)
-    C -->|One-Hot Encode| D(Feature Engineering)
-    D -->|Test/Train Split| E(Random Forest Classifier)
-    E -->|Fit & Optimize| F[(risk_model.pkl)]
+    A["Raw Borrower Data (CSV / Input)"] -->|Ingestion| B["Preprocessing Pipeline"]
+    B -->|Impute Medians| C["Clean Data"]
+    C -->|One-Hot Encode| D["Feature Engineering"]
+    D -->|Test/Train Split| E["Random Forest Classifier"]
+    E -->|Fit & Optimize| F[("risk_model.pkl")]
     
-    UI[Streamlit UI] -->|Manual Entry or CSV Upload| F
-    F -->|Inference| G[Credit Risk Score]
-    F -->|Explainability| H[Risk Factor Insights]
+    UI["Streamlit UI"] -->|Manual Entry or CSV Upload| F
+    F -->|Inference| G["Credit Risk Score"]
+    F -->|Explainability| H["Risk Factor Insights"]
 ```
 
 ### Future Agent Workflow (Milestone 2)
