@@ -210,3 +210,6 @@ For public portfolio showcasing, the dashboard is designed to be easily hosted u
 - **Logic:** Automated pipeline with RobustScaler.
 - **Modeling:** Optimized Random Forest (GridSearchCV).
 - **Explainability:** Integrated SHAP values for feature analysis.
+## 🚀 Execution Guide
+1. Install: `pip install -r requirements.txt`
+2. Run: `streamlit run app/streamlit_app.py`
