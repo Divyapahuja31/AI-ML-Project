@@ -38,11 +38,36 @@ By combining predictive Machine Learning (Random Forests) with generative Agenti
 
 ## 3. 🏗️ System Architecture
 
-### High-Level Workflow
-1. **Data Ingestion**: A borrower's financial profile is submitted via the UI.
-2. **Preprocessing**: The data flows through a strict pipeline handling missing values (median imputation) and categorical text (One-Hot Encoding).
-3. **ML Inference**: The processed data is fed into a persistently loaded `RandomForestClassifier`.
-4. **Agentic Synthesis**: The output probabilities and feature importances are passed to the Agentic Assistant, which cross-references internal policies to generate a final recommendation.
+### Input–Output Specification
+
+**Inputs**: 
+- **Borrower Profile**: Age, Monthly Income, Number of Dependents.
+- **Credit History**: Resolving Utilization (Credit limits usage), Debt Ratio.
+- **Repayment Behavior**: Frequency of 30-59 days late, 60-89 days late, and 90+ days late payments.
+- **Loan Types**: Counts of Open Credit Lines and Real Estate Loans.
+
+**Outputs**:
+- **Probability of Default**: Exact statistical probability (0% - 100%) that the borrower hits delinquency within 2 years.
+- **Risk Classification**: Binary classification (`High Risk` vs `Low Risk`).
+- **Feature Explainability**: Ranked mapping of which borrower attributes contributed most strongly to this specific risk profile calculation.
+
+### High-Level ML Pipeline (Milestone 1)
+
+```mermaid
+graph TD
+    A[Raw Borrower Data (CSV / Input)] -->|Ingestion| B(Preprocessing Pipeline)
+    B -->|Impute Medians| C(Clean Data)
+    C -->|One-Hot Encode| D(Feature Engineering)
+    D -->|Test/Train Split| E(Random Forest Classifier)
+    E -->|Fit & Optimize| F[(risk_model.pkl)]
+    
+    UI[Streamlit UI] -->|Manual Entry or CSV Upload| F
+    F -->|Inference| G[Credit Risk Score]
+    F -->|Explainability| H[Risk Factor Insights]
+```
+
+### Future Agent Workflow (Milestone 2)
+The output probabilities and feature importances will pass to an Agentic Assistant, which cross-references internal policies (RAG) to generate a final, structured lending recommendation.
 
 ---
 
