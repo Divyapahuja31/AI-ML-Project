@@ -1,7 +1,30 @@
-pandas==2.3.3
-numpy==2.4.2
-scikit-learn==1.8.0
-matplotlib==3.10.8
-seaborn==0.13.2
-streamlit==1.54.0
-joblib==1.5.3
+# ─── Core Data Science ────────────────────────────────────
+pandas>=2.0.0,<3.0.0
+numpy>=1.24.0,<2.0.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+joblib>=1.3.0
+
+# ─── User Interface ───────────────────────────────────────
+streamlit>=1.28.0
+plotly>=5.15.0
+
+# ─── Explainable AI ───────────────────────────────────────
+shap>=0.44.0
+
+# ─── Agentic AI — Milestone 2 ─────────────────────────────
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-groq>=0.1.6
+langgraph>=0.1.0
+
+# ─── RAG & Embeddings ─────────────────────────────────────
+sentence-transformers>=2.7.0
+faiss-cpu>=1.7.4
+
+# ─── PDF Report Generation ────────────────────────────────
+reportlab>=4.0.0
+
+# ─── Utilities ────────────────────────────────────────────
+python-dotenv>=1.0.0
