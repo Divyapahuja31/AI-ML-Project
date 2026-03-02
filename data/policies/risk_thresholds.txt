@@ -1,0 +1,88 @@
+CREDIT RISK DECISION THRESHOLDS AND SCORING GUIDELINES
+Quantitative Risk Management | Credit Policy Unit
+Internal Reference Document — Not for External Distribution
+
+
+SECTION 1 — PROBABILITY OF DEFAULT THRESHOLDS
+
+The AI-assisted credit scoring system outputs a probability of default (PD) representing the statistical likelihood that the borrower will become seriously delinquent, defined as 90 or more days past due, within the next 24 months. The following decision thresholds apply to all consumer loan applications.
+
+PD below 15%
+Decision: APPROVE — Low Risk
+Standard loan terms apply with no additional requirements. Eligible for promotional rate programmes and maximum requested credit amounts. Flag for annual periodic review.
+
+PD from 15% to 29%
+Decision: APPROVE WITH MONITORING — Moderate Risk
+Standard approval with enhanced oversight. Credit line capped at 85% of requested amount. Quarterly account review during the first 12 months. Interest rate adjusted upward by 50 to 150 basis points based on exact PD.
+
+PD from 30% to 49%
+Decision: CONDITIONAL APPROVE — Elevated Risk
+Approval subject to compensating factors as defined in the Credit Assessment Standards Section 4. Mandatory monthly auto-debit enrolment. Loan amount limited to 70% of requested amount. Interest rate premium of 150 to 300 basis points applies. Enhanced monitoring for first 24 months.
+
+PD of 50% or above
+Decision: DECLINE — High Risk
+Standard decline. Issue adverse action notice per Regulation B within 30 days. Applicant must be referred to credit counselling resources. Eligible to reapply after a minimum of 6 months with documented financial improvement.
+
+
+SECTION 2 — KEY RISK FACTOR BENCHMARKS
+
+The following thresholds define acceptable versus adverse ranges for the primary risk features used by the scoring model.
+
+Revolving Credit Utilization (rev_util)
+Good range:       0% to 30% utilization
+Moderate range:   30% to 60% utilization (increased scrutiny required)
+Adverse:          Above 60% utilization (strong predictor of financial stress)
+Critical:         Above 80% utilization (primary adverse indicator)
+
+Debt Ratio (debt_ratio — total monthly debt payments divided by gross income)
+Good range:       Below 0.35
+Moderate range:   0.35 to 0.43
+Adverse:          Above 0.43 (exceeds standard DTI threshold)
+Disqualifying:    Above 0.50 without strong compensating factors
+
+Delinquency — 90 or More Days Past Due (late_90) in past 24 months
+Acceptable:       Zero instances
+Watch flag:       One instance with documented explanation and recovery evidence
+Adverse:          Two or more instances (automatic Conditional or Decline tier)
+
+Delinquency — 30 to 89 Days Past Due (late_30_59, late_60_89) in past 12 months
+Acceptable:       Zero to one instances
+Moderate concern: Two instances (requires analyst review)
+Adverse:          Three or more instances
+
+Open Credit Lines (open_credit)
+Normal range:     Three to fifteen active accounts
+Thin-file alert:  Fewer than three accounts (insufficient credit history)
+Credit-seeking:   More than twenty accounts (potential financial stress signal)
+
+Monthly Income (monthly_inc)
+Minimum threshold: $1,500 per month net income for any standard consumer loan
+Preferred minimum: $3,000 per month for loans above $10,000
+
+
+SECTION 3 — COMPOSITE SCORE ADJUSTMENTS
+
+Risk analysts may apply documented score adjustments in the following circumstances when supported by verifiable evidence.
+
+Upward PD adjustment (increases assessed risk):
++5 percentage points per derogatory public record within the past 7 years.
++3 percentage points for each additional 90-day delinquency beyond the first.
+
+Downward PD adjustment (decreases assessed risk):
+-3 percentage points per year of consecutive perfect payment history exceeding five years.
+-5 percentage points for verified liquid reserves covering six or more months of proposed loan payments.
+-4 percentage points for verified employment tenure of ten or more years at current employer.
+
+
+SECTION 4 — MODEL OVERRIDE POLICY
+
+Credit analysts may override the AI-generated recommendation in documented cases. All overrides require written justification citing specific compensating or aggravating factors. Senior underwriter co-signature is required for overrides on loans exceeding $50,000. All override data must be logged in the Model Risk Management system within 24 hours of the decision. Override rates exceeding 15% in any given quarter automatically trigger a model performance review by the Model Risk Committee.
+
+
+SECTION 5 — SPECIAL LENDING PROGRAMMES
+
+Thin-File Borrower Programme
+Applicants with fewer than three open credit lines and no delinquency history may qualify for a secured credit-builder product regardless of the AI risk score. Maximum initial credit limit is $2,500 with a mandatory 12-month review.
+
+First-Time Homebuyer Programme
+Reduced DTI thresholds of up to 50% may apply for first-time homebuyers who meet income and property eligibility criteria under applicable HUD guidelines and state housing authority programmes.

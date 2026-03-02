@@ -1,0 +1,62 @@
+INTERNAL CREDIT ASSESSMENT STANDARDS
+Version 2.3 | Effective January 2024
+Risk Management Division | For Internal Use Only
+
+
+SECTION 1 — PURPOSE AND SCOPE
+
+These standards govern the credit risk assessment process for all consumer lending products including personal loans, home equity lines of credit (HELOCs), and instalment credit facilities. This document establishes minimum underwriting criteria, risk tolerance thresholds, and decision frameworks for credit analysts and AI-assisted decision systems.
+
+
+SECTION 2 — BORROWER QUALIFICATION CRITERIA
+
+2.1 Debt-to-Income Ratio (DTI)
+
+All borrowers must demonstrate a total debt-to-income ratio at or below 43% to qualify for standard loan products. Borrowers with DTI between 43% and 50% may be considered for conditional approval with compensating factors such as substantial liquid reserves or strong collateral. DTI exceeding 50% constitutes a disqualifying condition under standard underwriting guidelines.
+
+2.2 Revolving Credit Utilization
+
+Revolving credit utilization is a key predictive indicator of borrower financial distress. Applicants with utilization below 30% are considered low-risk. Utilization between 30% and 60% warrants additional scrutiny by the credit analyst. Utilization above 80% is a significant adverse indicator and must trigger a manual review before any approval decision is issued.
+
+2.3 Delinquency History
+
+Any record of 90 or more days past due within the past 24 months is a material adverse event under these standards. Multiple instances of 30–59 or 60–89 day delinquencies within the past 12 months may also constitute grounds for decline. Credit analysts must document the reason for any exception approvals when adverse repayment history is present.
+
+2.4 Income Verification
+
+Monthly net income must be independently verifiable via pay stubs, tax returns, or bank statements. Stated income applications are not accepted for loan amounts exceeding $25,000. Income stability of two or more years at the current employer is preferred but not required.
+
+2.5 Open Credit Lines
+
+The number of open credit lines provides a signal of the borrower's credit experience. Applicants with fewer than three open credit lines (thin-file borrowers) present elevated uncertainty and require supplementary credit assessment. Applicants with more than 20 open lines may be exhibiting credit-seeking behaviour, which is an adverse indicator.
+
+
+SECTION 3 — RISK CLASSIFICATION TIERS
+
+Tier A — Low Risk (Default Probability below 15%)
+Borrowers in Tier A present minimal credit risk. Standard loan terms apply. No additional collateral required. Eligible for preferred interest rates and maximum loan amounts.
+
+Tier B — Moderate Risk (Default Probability 15% to 30%)
+Borrowers in Tier B require enhanced monitoring. Loan terms may include higher interest rates, shorter tenures, or reduced credit limits. Quarterly account review is recommended during the first year of the loan.
+
+Tier C — Elevated Risk (Default Probability 30% to 50%)
+Conditional approval only. Requires compensating factors: co-signer, collateral, or reduced loan amount. Mandatory enrolment in monthly auto-debit repayment programme.
+
+Tier D — High Risk (Default Probability above 50%)
+Standard decline under these guidelines. Applicant should be referred to credit counselling services. Reapplication eligibility after 6 months minimum, subject to demonstrated improvement.
+
+
+SECTION 4 — COMPENSATING FACTORS
+
+The following compensating factors may offset adverse credit indicators when appropriately documented:
+
+— Substantial liquid assets: minimum 6 months of loan payment equivalent held in verified accounts
+— Long-term employment stability: 10 or more years with the current employer
+— Strong collateral with loan-to-value ratio below 70%
+— Co-signer with Tier A credit profile who satisfies all primary qualification criteria independently
+— Significant down payment: 30% or more of total loan amount for secured products
+
+
+SECTION 5 — MODEL GOVERNANCE
+
+AI-generated credit risk scores must be validated quarterly against realised default rates. Model drift exceeding 5% in Gini coefficient versus the validation benchmark requires immediate escalation to the Model Risk Committee. All AI-assisted decisions must be explainable and auditable using approved interpretability methods such as SHAP value attribution. Adverse action notices must cite specific risk factors in plain, non-technical language that the applicant can understand and act upon.
