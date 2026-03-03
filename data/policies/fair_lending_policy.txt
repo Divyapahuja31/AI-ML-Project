@@ -1,0 +1,67 @@
+FAIR LENDING COMPLIANCE POLICY
+Consumer Protection and Equal Credit Division
+Version 1.8 | Reviewed Quarterly | Mandatory Compliance Document
+
+
+SECTION 1 — REGULATORY FRAMEWORK
+
+This institution is committed to full compliance with all applicable fair lending laws and regulations, including but not limited to:
+
+— The Equal Credit Opportunity Act (ECOA), 15 U.S.C. Section 1691 et seq.
+— The Fair Housing Act (FHA), 42 U.S.C. Sections 3601 through 3619
+— The Community Reinvestment Act (CRA)
+— The Consumer Financial Protection Act (CFPA)
+— Regulation B, which implements the ECOA
+— State-level consumer protection statutes applicable in jurisdictions of operation
+
+
+SECTION 2 — PROHIBITED BASES FOR CREDIT DECISIONS
+
+Credit decisions must be made solely on the basis of creditworthiness and demonstrated ability to repay. The following characteristics must never be used, directly or indirectly, as a basis for credit decisions:
+
+— Race or colour
+— National origin or ethnicity
+— Religion
+— Sex or gender identity
+— Marital status or familial status
+— Age, except as required by law for minimum age of majority
+— Receipt of public assistance income
+— Exercise of any right under the Consumer Credit Protection Act
+— Disability status
+
+
+SECTION 3 — AI MODEL FAIRNESS REQUIREMENTS
+
+All machine learning models used in credit decisioning must be evaluated for potential disparate impact prior to deployment and on an ongoing basis.
+
+3.1 Adverse Impact Analysis
+
+The approval rate for any protected class must not fall below 80% of the approval rate of the most favoured group, in accordance with the four-fifths or 80 percent rule established under EEOC guidelines and adopted for credit fairness assessment. Models failing this threshold require bias remediation before deployment or continued use.
+
+3.2 Proxy Variable Assessment
+
+Model features that are highly correlated with protected characteristics (for example, postal code as a demographic proxy) must be evaluated and removed or adjusted. Feature importance analyses must be reviewed by the Fair Lending Officer prior to model deployment. The use of geographic data as a primary risk driver is prohibited unless its credit-relevance is independently justified.
+
+3.3 Explainability Requirements for Adverse Actions
+
+For any adverse action, the institution must be able to identify and communicate specific, quantitative reasons for the decline in plain language. AI model outputs must therefore be accompanied by explainable feature-level attributions. SHAP (SHapley Additive exPlanations) values or equivalent methods are the approved approach for satisfying this requirement.
+
+
+SECTION 4 — ADVERSE ACTION NOTICES
+
+Under Regulation B implementing the ECOA, applicants who are denied credit or offered less favourable terms must receive an adverse action notice within 30 days of the decision. The notice must include:
+
+— The primary reasons for the adverse credit decision (maximum four specific reasons)
+— The applicant's right to receive a free copy of any consumer report used in the decision
+— The name, address, and contact information of any consumer reporting agency that provided information
+— Reference to the applicant's right to dispute inaccurate information
+
+
+SECTION 5 — MONITORING AND REPORTING
+
+The Fair Lending Officer must conduct disparate impact analyses across all credit products on at least an annual basis. Any identified disparities exceeding the 80% rule threshold must be investigated, and corrective action must be documented and reviewed by the Board Risk Committee. Results must be included in the annual fair lending report submitted to senior management.
+
+
+SECTION 6 — TRAINING REQUIREMENTS
+
+All credit analysts, underwriters, model developers, and staff involved in credit decisioning must complete Fair Lending training annually. Training records must be maintained for a minimum of five years and must be available for examination by regulatory agencies upon request.

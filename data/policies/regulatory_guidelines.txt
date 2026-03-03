@@ -1,0 +1,78 @@
+REGULATORY CREDIT RISK FRAMEWORK OVERVIEW
+Compliance Reference: Basel III and Consumer Lending Regulations
+Risk and Compliance Division | For Internal Reference Only
+
+
+SECTION 1 — BASEL III CREDIT RISK MANAGEMENT PRINCIPLES
+
+Basel III establishes internationally agreed minimum capital requirements and risk management standards for banks and credit-active financial institutions. The framework is implemented domestically through the Capital Requirements Regulation and related supervisory guidance.
+
+1.1 Definition of Credit Risk
+
+Credit risk is defined as the risk of financial loss resulting from a borrower's failure to meet their contractual payment obligations. Under Basel III, institutions must hold regulatory capital commensurate with their risk-weighted asset exposures.
+
+1.2 Probability of Default Under the Internal Ratings-Based Approach
+
+Institutions using the Internal Ratings-Based (IRB) approach must estimate the Probability of Default (PD) as the long-run average one-year default rate for borrowers assigned to each internal rating grade. PD estimates must be based on historical performance data covering a minimum of five years. For retail exposures such as consumer loans, statistical credit scoring models are permitted under the Foundation IRB approach, subject to supervisory approval.
+
+1.3 Loss Given Default
+
+Loss Given Default (LGD) represents the fraction of the outstanding exposure that would be lost if the borrower defaults, net of any recovery. Under the standardised approach for unsecured consumer loans, LGD is standardised at 75%. Secured loans benefit from reduced LGD figures based on the quality, liquidity, and enforceability of collateral.
+
+1.4 Capital Requirements for Consumer Credit
+
+Risk weight for qualifying retail exposures: 75% under the standardised approach.
+Risk weight for high-risk exposures (PD above 50%): 150%.
+Minimum total capital ratio: 8% of risk-weighted assets, comprising Tier 1 plus Tier 2 capital.
+Capital Conservation Buffer: an additional 2.5% of risk-weighted assets in Common Equity Tier 1 capital.
+
+
+SECTION 2 — CONSUMER LENDING REGULATORY REQUIREMENTS
+
+2.1 Truth in Lending Act and Regulation Z
+
+All consumer credit agreements must clearly disclose: the Annual Percentage Rate (APR), finance charges expressed in dollar terms, the total amount financed, total of all payments, and the full payment schedule. AI-generated decision systems must produce explanations compatible with these disclosure requirements.
+
+2.2 Fair Credit Reporting Act
+
+Consumer credit reports may only be obtained for permissible purposes as defined in Section 604 of the FCRA, including evaluation of a credit application. If an adverse action is taken based on information in a consumer report, the applicant must receive a notice identifying the consumer reporting agency, their right to obtain a free copy of the report, and their right to dispute inaccurate information directly with the agency.
+
+2.3 Bank Secrecy Act and Anti-Money Laundering
+
+Customer Due Diligence is required for all new loan originations. Beneficial ownership information must be collected and verified for all business entity borrowers. Suspicious transaction patterns that may indicate money laundering or fraud must be reported via Suspicious Activity Reports to FinCEN within the required timeframe.
+
+
+SECTION 3 — MODEL RISK MANAGEMENT GUIDANCE (Based on SR 11-7)
+
+The Federal Reserve's Supervisory Letter SR 11-7 establishes the regulatory standard for model risk management in financial institutions. Key requirements applicable to AI credit scoring systems include the following.
+
+Conceptual Soundness Review
+Are the training data, modelling methodology, and underlying assumptions appropriate for the intended use? Is the model's theoretical basis well-supported and clearly documented?
+
+Outcome Analysis and Ongoing Monitoring
+Is the model performing as intended on current borrower populations? Performance must be tracked against key metrics including ROC-AUC, Gini coefficient, and realised default rates. Significant degradation requires escalation and model review.
+
+Governance Responsibilities
+A designated model owner is responsible for day-to-day performance monitoring. An independent model validation team must validate material models prior to deployment and at least annually thereafter. Material model changes require Board Risk Committee approval.
+
+
+SECTION 4 — DATA GOVERNANCE FOR CREDIT MODELS
+
+4.1 Training Data Quality Standards
+
+Training data must be representative of the current borrower population and lending environment. Systematic selection bias in training data will produce biased model outputs. Missing data must be handled through documented, justifiable imputation strategies. Data lineage must be maintained from source systems through to model inputs.
+
+4.2 Model Explainability and Compliance
+
+Regulators and courts increasingly require explainable AI in credit decisioning contexts. Feature attribution methods such as SHAP (SHapley Additive exPlanations) or LIME provide legally defensible, instance-level explanations for individual credit decisions that are both mathematically rigorous and interpretable by non-specialists. Opaque black-box models without institution-approved explainability capabilities are not compliant with adverse action notice requirements under Regulation B.
+
+4.3 Data Retention Requirements
+
+Loan application data, model inputs, decision outputs, and explanations must be retained for a minimum of 25 months to support adverse action notice obligations, regulatory examination needs, and potential fair lending litigation. Records must be accessible in a structured format within 5 business days of a regulatory request.
+
+
+SECTION 5 — ETHICAL AI IN LENDING
+
+Financial institutions deploying AI in credit decisioning are expected to meet the following ethical standards in addition to regulatory requirements.
+
+Regular bias testing across protected classes and demographic proxies is mandatory. Human review pathways must be available and accessible for all borderline or disputed AI-generated credit decisions. Institutions should publish annual fair lending self-assessments summarising disparate impact findings and remediation actions. Automated decisions must be subject to a defined, accessible appeals process that allows applicants to challenge and seek reconsideration of AI-assisted decisions. Feature engineering must avoid the creation of proxy variables that indirectly encode protected characteristics such as race, gender, or national origin.
