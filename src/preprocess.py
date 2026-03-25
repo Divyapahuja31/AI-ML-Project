@@ -107,11 +107,27 @@ def preprocess_pipeline(
     filepath: str,
     target_col: str = TARGET_COL,
 ) -> tuple:
-    """Full pipeline: load → clean → encode → split.
+    """
+    Full data transformation pipeline.
 
-    Returns
-    -------
-    X_train, X_test, y_train, y_test
+    Execution Flow:
+    1. Load: Reads raw CSV from local path.
+    2. Clean: Drops rows with missing targets, imputes medians, and clips 99th percentile outliers.
+    3. Encode: Converts categorical data into binary indicators.
+    4. Slice: Selects specific feature set and target variable.
+    5. Split: Partitions data into 80% training and 20% test sets (stratified).
+
+    Parameters:
+    -----------
+    filepath : str
+        Path to the raw CSV data.
+    target_col : str
+        Name of the binary target variable (default: dlq_2yrs).
+
+    Returns:
+    --------
+    tuple (X_train, X_test, y_train, y_test)
+        Preprocessed training and verification sets.
     """
     df = load_data(filepath)
     df = clean_data(df)
