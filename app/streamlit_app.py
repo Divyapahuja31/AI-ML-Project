@@ -280,12 +280,27 @@ with st.sidebar:
     artifact = load_model()
     if artifact:
         m = artifact.get("metrics", {})
-        st.markdown("**📊 Model Performance**")
+        meta = artifact.get("training_metadata", {})
+        
+        st.markdown("**📊 Model Performance (Test Set)**")
         c1, c2 = st.columns(2)
         c1.metric("ROC-AUC",   f"{m.get('roc_auc', 0):.3f}")
         c1.metric("Recall",    f"{m.get('recall',  0):.3f}")
         c2.metric("Precision", f"{m.get('precision', 0):.3f}")
         c2.metric("F1 Score",  f"{m.get('f1', 0):.3f}")
+        
+        with st.expander("🛠️ Training Metadata", expanded=False):
+            st.caption(f"**Last Trained:** {meta.get('timestamp', 'N/A')[:16].replace('T', ' ')}")
+            st.caption(f"**Training Time:** {meta.get('duration_seconds', 0):.2f}s")
+            samples = meta.get('n_samples', 'N/A')
+            samples_str = f"{samples:,}" if isinstance(samples, (int, float)) else samples
+            st.caption(f"**Samples:** {samples_str}")
+            
+            cv = artifact.get("cv_metrics", [])
+            if cv:
+                st.caption("**5-Fold CV Mean ROC-AUC:**")
+                cv_mean = np.mean([f['roc_auc'] for f in cv])
+                st.code(f"{cv_mean:.4f}")
 
     st.markdown("---")
 
