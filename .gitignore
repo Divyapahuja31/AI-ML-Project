@@ -3,3 +3,10 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .DS_Store
+
+# Data & Models (Exclude large binaries)
+data/*.csv
+models/*.pkl
+models/*.h5
+*.log
+.env
