@@ -157,25 +157,32 @@ The application instantly returns:
 
 ## 11. 🚀 Installation & Setup Instructions
 
+### Prerequisites
+- Python 3.10 or higher
+- Git
+
+### Step-by-Step Setup
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/AI-ML-Project.git
+git clone https://github.com/Divyapahuja31/AI-ML-Project.git
 cd AI-ML-Project
 
-# 2. Create the virtual environment
+# 2. Create and activate virtual environment
 python3 -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-# 3. Activate the environment (Mac/Linux)
-source venv/bin/activate
-# Windows: venv\Scripts\activate
-
-# 4. Install requirements
+# 3. Install project dependencies
 pip install -r requirements.txt
 
-# 5. Run the Model Training Pipeline (Will generate the .pkl file)
-python3 src/train_model.py
+# 4. Environment Configuration
+# Create a .env file or export variables:
+# export GROQ_API_KEY="your_groq_api_key_here"
 
-# 6. Run the local Streamlit Application
+# 5. Run the Model Training Pipeline
+# This script performs 5-fold CV and persists the model metadata.
+python3 train.py
+
+# 6. Launch the Streamlit Dashboard
 streamlit run app/streamlit_app.py
 ```
 
