@@ -8,9 +8,57 @@
 
 An end-to-end AI-powered fintech application that predicts borrower credit risk using an optimized Machine Learning pipeline and extends into an **Agentic AI Assistant** for autonomous, reasoning-based lending decision support.
 
+[<img src="https://img.shields.io/badge/🎥-Watch_Demo_Video-red?style=for-the-badge&logo=youtube&logoColor=white">](https://drive.google.com/drive/folders/11oh0y1fwAReJZ-J9xP26yvMKfoqF0kJA)
+
 ---
 
-## 1. 📖 Project Overview
+## Visual Showcase
+
+###  Dashboard Overview - Home Screen
+![Home Screen](docs/screenshots/home.png)
+
+**Features**: Real-time credit risk assessment dashboard with model performance metrics (ROC-AUC: 0.860, Precision: 0.784)
+
+---
+
+### Risk Assessment & Scoring
+![Risk Assessment](docs/screenshots/assessment.png)
+
+**Features**: 
+- Interactive borrower profile input (age, income, dependencies)
+- Automatic credit risk prediction 
+- Real-time risk classification (Low/Moderate/High Risk)
+- Probability of default visualization
+- SHAP-based feature importance analysis
+
+---
+
+### Lending Assessment & Report Generation
+![Assessment Report](docs/screenshots/report.png)
+
+**Features**:
+- Comprehensive assessment reports with policy-grounded recommendations
+- Decision rationale based on regulatory guidelines
+- Risk mitigation suggestions
+- Lending decision (APPROVE/DENY) with confidence scores
+- References to fair lending policies
+
+---
+
+### Portfolio Analytics & Batch Processing
+![Portfolio Analytics](docs/screenshots/portfolio.png)
+
+**Features**:
+- Batch portfolio analysis for multiple borrowers
+- Risk tier distribution visualization
+- Default probability distribution analysis
+- Feature correlation heatmaps
+- Expected loss rate calculations
+- Downloadable portfolio reports
+
+---
+
+## 1. Project Overview
 
 ### The Real-World Lending Problem
 Traditional credit underwriting relies heavily on static scorecards and rigid, rule-based systems. These legacy systems often fail to adapt to complex financial behaviors, lack transparency into *why* an applicant was rejected, and require significant manual review time from credit analysts.
@@ -25,7 +73,7 @@ By combining predictive Machine Learning (Random Forests) with generative Agenti
 
 ---
 
-## 2. ✨ Key Features
+## 2.  Key Features
 
 - **ML-Based Credit Risk Prediction**: Real-time evaluation of borrower delinquency probabilities.
 - **Risk Scoring**: Statistically modeling "High Risk" vs "Low Risk" applicants.
@@ -36,7 +84,7 @@ By combining predictive Machine Learning (Random Forests) with generative Agenti
 
 ---
 
-## 3. 🏗️ System Architecture
+## 3.  System Architecture
 
 ### Input–Output Specification
 
@@ -71,7 +119,7 @@ The output probabilities and feature importances will pass to an Agentic Assista
 
 ---
 
-## 4. 🧰 Tech Stack
+## 4. Tech Stack
 
 - **Core Python**: Pandas, NumPy
 - **Machine Learning**: Scikit-Learn, Joblib
@@ -82,7 +130,7 @@ The output probabilities and feature importances will pass to an Agentic Assista
 
 ---
 
-## 5. 📂 Project Structure
+## 5. Project Structure
 
 ```text
 AI-ML-Project/
@@ -104,7 +152,7 @@ AI-ML-Project/
 
 ---
 
-## 6. ⚙️ Machine Learning Pipeline
+## 6. Machine Learning Pipeline
 
 1. **Data Preprocessing**: Handling Missing Data (NaNs) via automated median imputation to preserve sample size without skewing distribution.
 2. **Feature Engineering**: One-hot encoding text values and scaling numeric fields to uniform baseline distributions.
@@ -114,7 +162,7 @@ AI-ML-Project/
 
 ---
 
-## 7. 📈 Model Evaluation Metrics
+## 7. Model Evaluation Metrics
 
 In credit risk, accuracy alone is incredibly misleading. We optimize across multiple axes:
 
@@ -125,7 +173,7 @@ In credit risk, accuracy alone is incredibly misleading. We optimize across mult
 
 ---
 
-## 8. 🔍 Explainable AI (XAI)
+## 8.  Explainable AI (XAI)
 
 Black-box models are restricted in heavily regulated financial environments. This system guarantees explainability by extracting node-level split importances directly from the Random Forest.
 
@@ -136,7 +184,7 @@ Common driving risk factors identified by the system include:
 
 ---
 
-## 9. 🧠 Agentic AI Decision System *(Milestone 2)*
+## 9.  Agentic AI Decision System *(Milestone 2)*
 
 While the ML model outputs a raw probability (e.g., *78% chance of default*), an underwriter needs more context. 
 
@@ -144,7 +192,7 @@ The **Agentic AI System** wraps the ML model. The Agent evaluates the features a
 
 ---
 
-## 10. 🖥️ User Interface
+## 10.  User Interface
 
 The **Streamlit** dashboard empowers non-technical users (Loan Officers, Underwriters) to securely submit an applicant's financial attributes. 
 
@@ -155,7 +203,7 @@ The application instantly returns:
 
 ---
 
-## 11. 🚀 Installation & Setup Instructions
+## 11.  Installation & Setup Instructions
 
 ### Prerequisites
 - Python 3.10 or higher
@@ -188,7 +236,7 @@ streamlit run app/streamlit_app.py
 
 ---
 
-## 12. 💡 Usage Guide
+## 12. Usage Guide
 
 1. Launch the Streamlit application.
 2. In the user interface, fill out the **Applicant Details** configuration form. Adjust critical variables like `Age`, `Monthly Income`, and `Credit Utilization`. 
@@ -197,14 +245,14 @@ streamlit run app/streamlit_app.py
 
 ---
 
-## 13. 🌐 Deployment
+## 13. Deployment
 
 This application is fully responsive and container-ready. 
 For public portfolio showcasing, the dashboard is designed to be easily hosted using **Streamlit Community Cloud** or **HuggingFace Spaces** with zero backend infrastructure configuration required.
 
 ---
 
-## 14. 🔮 Future Enhancements
+## 14. Future Enhancements
 
 - **RAG Integration**: Ingesting PDF credit policy manuals to allow the Agent to cite actual internal policy rules during application rejections.
 - **Regulatory Retrieval**: Tying the LLM to live searches of local lending limits and regulations.
